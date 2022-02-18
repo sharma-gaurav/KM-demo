@@ -76,6 +76,7 @@ buildNumber.properties
 ### IntelliJ ###
 .idea/
 *.iml
+*.ipr
 
 
 ### Node.js ###

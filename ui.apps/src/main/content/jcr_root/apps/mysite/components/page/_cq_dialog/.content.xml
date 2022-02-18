@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Page"
+          sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                    maximized="{Boolean}false">
+                <items jcr:primaryType="nt:unstructured">
+                    <basic
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                            margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <tags
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/fieldset"
+                                            jcr:title="Tags">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <primarysolutiontag
+                                                    jcr:primaryType="nt:unstructured"
+                                                    forceSelection="{Boolean}true"
+                                                    fieldLabel="Primary Category Tag"
+                                                    fieldDescription="Only One Primary Category Tag can be selected"
+                                                    name="./primarySolutionTag"
+                                                    cq:showOnCreate="true"
+                                                    required="true"
+                                                    sling:resourceType="cq/gui/components/coral/common/form/tagfield">
+                                            </primarysolutiontag>
+                                            <primarytopictag
+                                                    jcr:primaryType="nt:unstructured"
+                                                    forceSelection="{Boolean}true"
+                                                    fieldLabel="Primary Topic Tag"
+                                                    fieldDescription="Only One Primary Topic Tag can be selected"
+                                                    name="./primaryTopicTag"
+                                                    cq:showOnCreate="true"
+                                                    required="true"
+                                                    sling:resourceType="cq/gui/components/coral/common/form/tagfield">
+                                            </primarytopictag>
+                                            <primarysolutiontagMergeField
+                                                    jcr:primaryType="nt:unstructured"
+                                                    ignoreData="{Boolean}true"
+                                                    name=":primarySolutionTag@PropertyMerge"
+                                                    value="cq:tags"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/hidden">
+                                            </primarysolutiontagMergeField>
+                                            <primarytopictagMergeField
+                                                    jcr:primaryType="nt:unstructured"
+                                                    ignoreData="{Boolean}true"
+                                                    name=":primaryTopicTag@PropertyMerge"
+                                                    value="cq:tags"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/hidden">
+                                            </primarytopictagMergeField>
+                                            <cqTagsPropertyMergeAllowDuplicates
+                                                    jcr:primaryType="nt:unstructured"
+                                                    ignoreData="{Boolean}true"
+                                                    name=":cq:tags@PropertyMerge.AllowDuplicates"
+                                                    value="false"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/hidden">
+                                            </cqTagsPropertyMergeAllowDuplicates>
+                                            <cqTagsPropertyMergeTypeHint
+                                                    jcr:primaryType="cq:Widget"
+                                                    ignoreData="{Boolean}true"
+                                                    name=":cq:tags@PropertyMerge.TypeHint"
+                                                    value="String"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/hidden">
+                                            </cqTagsPropertyMergeTypeHint>
+                                        </items>
+                                    </tags>
+                                </items>
+                            </column>
+                        </items>
+                    </basic>
+                    <errorpages
+                            jcr:primaryType="nt:unstructured"
+                            cq:showOnCreate="true"
+                            jcr:title="Error Page"
+                            sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <section1 jcr:primaryType="nt:unstructured"
+                                              jcr:title="Error Page Config"
+                                              sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <errorpages
+                                                    jcr:primaryType="nt:unstructured"
+                                                    fieldLabel="Error Pages"
+                                                    name="./errorPages"
+                                                    rootPath="/content/mysite"
+                                                    fieldDescription="Error pages for this content tree"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield">
+                                            </errorpages>
+                                        </items>
+                                    </section1>
+                                </items>
+                            </column>
+                        </items>
+                    </errorpages>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

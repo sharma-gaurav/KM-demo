@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured"
+          contentTypes="[text/html]"
+          enabled="{Boolean}true"
+          generatorType="htmlparser"
+          order="0"
+          paths="[/content/mysite]"
+          serializerType="htmlwriter"
+          transformerTypes="[linkchecker,versioned-clientlibs,ccvar-transformer]">
+    <generator-htmlparser
+            jcr:primaryType="nt:unstructured"
+            includeTags="[A,/A,DIV,/DIV,SPAN,/SPAN,P,/P,SECTION,/SECTION,H1,/H1,H2,/H2,H3,/H3,H4,/H4,H5,/H5,LI,/LI,BUTTON,/BUTTON]"/>
+</jcr:root>
